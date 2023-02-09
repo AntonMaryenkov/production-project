@@ -58,7 +58,7 @@ module.exports = {
 		'semi-spacing': 'error',
 		'block-spacing': 'error',
 		'space-unary-ops': 'error',
-		'i18next/no-literal-string': ['error', { markupOnly: true }],
-		'max-len': ['error', { ignoreComments: true }]
+		'i18next/no-literal-string': ['error', { markupOnly: true, ignoreAttribute: ['to'] }],
+		'max-len': ['error', { code: 100, ignoreComments: true }]
 	}
 };
