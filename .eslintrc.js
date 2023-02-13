@@ -10,7 +10,6 @@ module.exports = {
 		'plugin:@typescript-eslint/recommended',
 		'plugin:i18next/recommended'
 	],
-	'overrides': [],
 	'parser': '@typescript-eslint/parser',
 	'parserOptions': {
 		'ecmaVersion': 'latest',
@@ -58,7 +57,18 @@ module.exports = {
 		'semi-spacing': 'error',
 		'block-spacing': 'error',
 		'space-unary-ops': 'error',
-		'i18next/no-literal-string': ['error', { markupOnly: true, ignoreAttribute: ['to'] }],
+		'i18next/no-literal-string': ['error', {
+			markupOnly: true,
+			ignoreAttribute: ['to', 'data-testid']
+		}],
 		'max-len': ['error', { code: 100, ignoreComments: true }]
-	}
+	},
+	overrides: [
+		{
+			files: ['**/src/**/*.test.{ts,tsx}'],
+			rules: {
+				'i18next/no-literal-string': 'off',
+			}
+		}
+	]
 };
