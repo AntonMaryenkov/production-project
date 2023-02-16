@@ -20,7 +20,7 @@ module.exports = {
 	'plugins': ['react', '@typescript-eslint', 'i18next'],
 	'rules': {
 		'indent': ['error', 'tab'],
-		'linebreak-style': ['error', 'unix'],
+		'linebreak-style': 0,
 		'quotes': ['error', 'single'],
 		'semi': ['error', 'always'],
 		'react/react-in-jsx-scope': 'off',
