@@ -7,5 +7,7 @@
   "Произошла непредвиденная ошибкa": "An unexpected error has occurred",
   "Обновить страницу": "Refresh the page",
   "Короткий язык": "Ru",
-  "Войти": "log in"
+  "Войти": "log in",
+  "уменьшить": "decrement",
+  "увеличить": "increment"
 }

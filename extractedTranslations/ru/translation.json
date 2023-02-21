@@ -2,6 +2,8 @@
   "The pointer-events CSS property sets under what circumstances (if any) a particular graphic element can become the target of pointer events": {
     "": ""
   },
+  "decrement": "decrement",
+  "increment": "increment",
   "throw error": "throw error",
   "Войти": "Войти",
   "Главная": "Главная",
@@ -12,5 +14,7 @@
   "Произошла непредвиденная ошибка": "Произошла непредвиденная ошибка",
   "Страница не найдена": "Страница не найдена",
   "Тумблер": "Тумблер",
-  "Язык": "Язык"
+  "Язык": "Язык",
+  "увеличить": "увеличить",
+  "уменьшить": "уменьшить"
 }
