@@ -57,7 +57,9 @@ module.exports = {
 			ignoreComments: true
 		}],
 		'react-hooks/rules-of-hooks': 'error',
-		'react-hooks/exhaustive-deps': 'error'
+		'react-hooks/exhaustive-deps': 'error',
+		'react/no-unused-prop-types': 'error',
+		'react/display-name': 'off'
 	},
 	overrides: [{
 		files: ['**/src/**/*.{test,stories}.{ts,tsx}'],
