@@ -8,7 +8,7 @@ export default ({ config }: { config: webpack.Configuration }) => {
 		entry: '',
 		build: '',
 		html: '',
-		src: path.resolve(__dirname, '..', '..', 'src')
+		src: path.resolve(__dirname, '..', '..', 'src'),
 	};
 
 	config!.resolve!.modules!.push(paths.src);

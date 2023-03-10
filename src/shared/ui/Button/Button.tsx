@@ -6,14 +6,15 @@ export enum ButtonTheme {
   CLEAR = 'clear',
 	CLEAR_INVERTED = 'clear_inverted',
 	OUTLINE = 'outline',
+	OUTLINE_RED = 'outline_red',
 	BACKGROUND = 'background',
-	BACKGROUND_INVERTED = 'background_inverted'
+	BACKGROUND_INVERTED = 'background_inverted',
 }
 
 export enum ButtonSize {
 	M = 'size_m',
 	L = 'size_l',
-	XL = 'size_xl'
+	XL = 'size_xl',
 }
 
 interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {

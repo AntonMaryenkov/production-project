@@ -2,7 +2,7 @@ module.exports = {
 	'env': {
 		'browser': true,
 		'es2021': true,
-		'node': true
+		'node': true,
 	},
 	'extends':
 		[
@@ -10,18 +10,18 @@ module.exports = {
 			'plugin:react/recommended',
 			'plugin:@typescript-eslint/recommended',
 			'plugin:i18next/recommended',
-			'plugin:storybook/recommended'
+			'plugin:storybook/recommended',
 		],
 	'parser': '@typescript-eslint/parser',
 	'parserOptions': {
 		'ecmaVersion': 'latest',
-		'sourceType': 'module'
+		'sourceType': 'module',
 	},
 	'plugins': [
 		'react',
 		'@typescript-eslint',
 		'i18next',
-		'react-hooks'
+		'react-hooks',
 	],
 	'rules': {
 		'indent': ['error', 'tab'],
@@ -32,17 +32,17 @@ module.exports = {
 		'react/button-has-type': [2, {
 			'button': true,
 			'submit': true,
-			'reset': true
+			'reset': true,
 		}],
 		'react/jsx-props-no-spreading': 'warn',
 		'no-multiple-empty-lines': ['error', {
 			'max': 1,
 			'maxEOF': 1,
-			'maxBOF': 0
+			'maxBOF': 0,
 		}],
 		'keyword-spacing': ['error', {
 			'before': true,
-			'after': true
+			'after': true,
 		}],
 		'arrow-spacing': 'error',
 		'semi-spacing': 'error',
@@ -50,22 +50,24 @@ module.exports = {
 		'space-unary-ops': 'error',
 		'i18next/no-literal-string': ['error', {
 			markupOnly: true,
-			ignoreAttribute: ['to', 'data-testid', 'name']
+			ignoreAttribute: ['to', 'data-testid', 'name'],
 		}],
 		'max-len': ['error', {
 			code: 120,
-			ignoreComments: true
+			ignoreComments: true,
 		}],
-		'react-hooks/rules-of-hooks': 'error',
+		'react-hooks/rules-of-hooks': 'error', 
 		'react-hooks/exhaustive-deps': 'error',
 		'react/no-unused-prop-types': 'error',
-		'react/display-name': 'off'
+		'react/display-name': 'off',
+		'@typescript-eslint/comma-dangle': ['error', 'always-multiline'],
+		'@typescript-eslint/member-delimiter-style': 'error',
 	},
 	overrides: [{
 		files: ['**/src/**/*.{test,stories}.{ts,tsx}'],
 		rules: {
 			'i18next/no-literal-string': 'off',
 			'max-len': 'off',
-		}
-	}]
+		},
+	}],
 };

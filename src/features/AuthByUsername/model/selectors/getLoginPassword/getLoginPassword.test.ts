@@ -5,8 +5,8 @@ describe('getLoginPassword', () => {
 	test('should return value', () => {
 		const state: DeepPartial<StateSchema> = {
 			loginForm: {
-				password: '12345678'
-			}
+				password: '12345678',
+			},
 		};
 		expect(getLoginPassword(state as StateSchema)).toEqual('12345678');
 	});

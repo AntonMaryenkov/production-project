@@ -6,14 +6,14 @@ describe('loginSlice', () => {
 		const state: DeepPartial<LoginSchema> = { username: 'username' };
 		expect(loginReducer(
 			state as LoginSchema,
-			loginActions.setUsername('username')
+			loginActions.setUsername('username'),
 		)).toEqual({ username: 'username' });
 	});
 	test('test set password', () => {
 		const state: DeepPartial<LoginSchema> = { password: '12345678' };
 		expect(loginReducer(
 			state as LoginSchema,
-			loginActions.setPassword('12345678')
+			loginActions.setPassword('12345678'),
 		)).toEqual({ password: '12345678' });
 	});
 });

@@ -7,7 +7,7 @@ import { StateSchema, StoreProvider } from 'app/providers/StoreProvider';
 
 export interface componentRenderOptions {
 	route?: string;
-	initialState?: DeepPartial<StateSchema>
+	initialState?: DeepPartial<StateSchema>;
 }
 
 export function ComponentRender(component: ReactNode, options: componentRenderOptions = {}) {
@@ -23,6 +23,6 @@ export function ComponentRender(component: ReactNode, options: componentRenderOp
 					{component}
 				</I18nextProvider>
 			</StoreProvider>
-		</MemoryRouter>
+		</MemoryRouter>,
 	);
 }

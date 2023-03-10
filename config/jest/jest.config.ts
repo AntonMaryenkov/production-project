@@ -19,10 +19,10 @@ export default {
 	clearMocks: true,
 	testEnvironment: 'jsdom',
 	coveragePathIgnorePatterns: [
-		'\\\\node_modules\\\\'
+		'\\\\node_modules\\\\',
 	],
 	moduleDirectories: [
-		'node_modules'
+		'node_modules',
 	],
 	modulePaths: [
 		'<rootDir>src',
@@ -33,7 +33,7 @@ export default {
 		'ts',
 		'tsx',
 		'json',
-		'node'
+		'node',
 	],
 	rootDir: '../../',
 	testMatch: [

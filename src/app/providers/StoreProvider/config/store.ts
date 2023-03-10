@@ -33,8 +33,8 @@ export function createReduxStore(
 		middleware: getDefaultMiddleware => getDefaultMiddleware({
 			thunk: {
 				extraArgument: extraArg,
-			}
-		})
+			},
+		}),
 	});
 	// eslint-disable-next-line @typescript-eslint/ban-ts-comment
 	// @ts-ignore
