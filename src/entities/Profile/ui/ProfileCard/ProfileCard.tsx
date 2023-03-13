@@ -8,6 +8,7 @@ import { Loader } from 'shared/ui/Loader/Loader';
 import { Avatar } from 'shared/ui/Avatar/Avatar';
 import { Currency, CurrencySelect } from 'entities/Currency';
 import { Country, CountrySelect } from 'entities/Country';
+import { KeyboardEvent } from 'react';
 
 interface ProfileCardProps {
 	className?: string;
@@ -63,6 +64,12 @@ export const ProfileCard = (props: ProfileCardProps) => {
 			</div>
 		);
 	}
+	//// вынести валидацию
+	const validateAge = (event: KeyboardEvent<HTMLInputElement>) => {
+		if (!/[0-9]/.test(event.key)) {
+			event.preventDefault();
+		}
+	};
 
 	const mods: Mods = {
 		[cls.editing]: !readonly,
@@ -98,6 +105,7 @@ export const ProfileCard = (props: ProfileCardProps) => {
 					className={cls.input}
 					onChange={onChangeAge}
 					readonly={readonly}
+					onKeyPress={validateAge}
 				/>
 				<Input
 					value={data?.city}

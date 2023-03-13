@@ -48,7 +48,7 @@
   "profile": {
     "first": "Антон",
     "lastname": "Марьенков",
-    "age": "32",
+    "age": 32,
     "currency": "RUB",
     "country": "Russia",
     "city": "Moscow",
