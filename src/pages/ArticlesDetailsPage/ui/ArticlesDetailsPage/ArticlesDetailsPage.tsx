@@ -2,17 +2,28 @@ import { classNames } from 'shared/lib/classNames/classNames';
 import cls from './ArticlesDetailsPage.module.scss';
 import { useTranslation } from 'react-i18next';
 import { memo } from 'react';
+import { ArticleDetails } from 'entities/Article';
+import { useParams } from 'react-router-dom';
 
 interface ArticlesDetailsPageProps {
 	className?: string;
 }
 
 const ArticlesDetailsPage = ({ className }: ArticlesDetailsPageProps) => {
-	const { t } = useTranslation('article');
+	const { t } = useTranslation('article-details');
+	const { id } = useParams<{ id: string }>();
+
+	if (!id) {
+		return (
+			<div className={classNames(cls.ArticlesDetailsPage, {}, [className])}>
+				{t('Статья не найдена')}
+			</div>
+		);
+	}
 
 	return (
 		<div className={classNames(cls.ArticlesDetailsPage, {}, [className])}>
-			{t('Страница с подробной информацией о статье')}
+			<ArticleDetails id={id} />
 		</div>
 	);
 };
