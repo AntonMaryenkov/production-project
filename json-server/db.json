@@ -29,20 +29,37 @@
   "comments": [
     {
       "id": "1",
-      "body": "some comment 1",
-      "postId": 1
+      "text": "some comment 1",
+      "articleId": "1",
+      "userId": "1"
     },
     {
       "id": "2",
-      "body": "some comment 2",
-      "postId": 2
+      "text": "some comment 2",
+      "articleId": "1",
+      "userId":  "1"
+    },
+    {
+      "id": "3",
+      "text": "some comment 3",
+      "articleId": "1",
+      "userId":  "2"
     }
   ],
   "users": [
     {
       "id": "1",
       "username": "admin",
-      "password": "123"
+      "password": "123",
+      "role": "ADMIN",
+      "avatar": "https://dic.academic.ru/pictures/wiki/files/77/Melvin_van_Horne.png"
+    },
+    {
+      "id": "2",
+      "username": "user",
+      "password": "123",
+      "role": "USER",
+      "avatar": "https://img.gazeta.ru/files3/211/10636211/futura2-pic4_zoom-1500x1500-63431-pic_32ratio_900x600-900x600-6772.jpg"
     }
   ],
   "profile": {
