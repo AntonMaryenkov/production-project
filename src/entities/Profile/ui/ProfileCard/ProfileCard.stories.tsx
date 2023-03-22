@@ -3,7 +3,6 @@ import { ComponentMeta, ComponentStory } from '@storybook/react';
 import { ProfileCard } from './ProfileCard';
 import { Currency } from 'entities/Currency';
 import { Country } from 'entities/Country';
-import AvatarImg from 'shared/assets/test/avatarStorybook.png';
 
 export default {
 	title: 'entities/ProfileCard',
@@ -25,7 +24,7 @@ Primary.args = {
 		country: Country.Russia,
 		city: 'Moscow',
 		username: 'username',
-		avatar: AvatarImg,
+		avatar: 'https://dic.academic.ru/pictures/wiki/files/77/Melvin_van_Horne.png',
 	},
 };
 
