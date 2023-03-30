@@ -11,7 +11,8 @@ import {
 	getProfileValidateErrors,
 	profileActions,
 	ProfileCard,
-	profileReducer, ValidateProfileError,
+	profileReducer,
+	ValidateProfileError,
 } from 'entities/Profile';
 import { useAppDispatch } from 'shared/lib/hooks/useAppDispatch/useAppDispatch';
 import { useSelector } from 'react-redux';
@@ -21,6 +22,7 @@ import { Country } from 'entities/Country';
 import { Text, TextTheme } from 'shared/ui/Text/Text';
 import { useInitialEffect } from 'shared/lib/hooks/useInitialEffect/useInitialEffect';
 import { useParams } from 'react-router-dom';
+import { Page } from 'shared/ui/Page/Page';
 
 const reducers: ReducersList = {
 	profile: profileReducer,
@@ -92,15 +94,15 @@ const ProfilePage = memo(({ className }: ProfilePageProps) => {
 
 	return (
 		<DynamicModuleLoader reducers={reducers} removeAfterUnmount>
-			<ProfilePageHeader />
-			{validateErrors?.length && validateErrors.map((err) => (
-				<Text
-					key={err}
-					theme={TextTheme.ERROR}
-					text={validateErrorTranslates[err]}
-				/>
-			))}
-			<div className={classNames('', {}, [className])}>
+			<Page className={classNames('', {}, [className])}>
+				<ProfilePageHeader />
+				{validateErrors?.length && validateErrors.map((err) => (
+					<Text
+						key={err}
+						theme={TextTheme.ERROR}
+						text={validateErrorTranslates[err]}
+					/>
+				))}
 				<ProfileCard
 					data={formData}
 					isLoading={isLoading}
@@ -108,14 +110,14 @@ const ProfilePage = memo(({ className }: ProfilePageProps) => {
 					readonly={readonly}
 					onChangeFirstname={onChangeFirstname}
 					onChangeLastname={onChangeLastname}
-					onChangeAge={ onChangeAge}
+					onChangeAge={onChangeAge}
 					onChangeCity={onChangeCity}
 					onChangeUsername={onChangeUsername}
 					onChangeAvatar={onChangeAvatar}
 					onChangeCurrency={onChangeCurrency}
 					onChangeCountry={onChangeCountry}
 				/>
-			</div>
+			</Page>
 		</DynamicModuleLoader>
 	);
 });
