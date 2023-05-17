@@ -1,4 +1,4 @@
-import { memo } from 'react';
+import { HTMLAttributeAnchorTarget, memo } from 'react';
 import { classNames } from 'shared/lib/classNames/classNames';
 import cls from './ArticleList.module.scss';
 import { useTranslation } from 'react-i18next';
@@ -12,6 +12,7 @@ interface ArticleListProps {
 	articles: Article[];
 	isLoading?: boolean;
 	view?: ArticleView;
+	target?: HTMLAttributeAnchorTarget;
 }
 
 const getSkeletons = (view: ArticleView) => {
@@ -28,6 +29,7 @@ export const ArticleList = memo((props: ArticleListProps) => {
 		articles,
 		isLoading,
 		view = ArticleView.SMALL,
+		target,
 	} = props;
 	const { t } = useTranslation('articles-page-filters');
 
@@ -37,7 +39,9 @@ export const ArticleList = memo((props: ArticleListProps) => {
 				key={article.id}
 				className={cls.card}
 				article={article}
-				view={view} />
+				view={view}
+				target={target}
+			/>
 		);
 	};
 

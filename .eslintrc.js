@@ -50,7 +50,7 @@ module.exports = {
 		'space-unary-ops': 'error',
 		'i18next/no-literal-string': ['error', {
 			markupOnly: true,
-			ignoreAttribute: ['to', 'data-testid', 'name'],
+			ignoreAttribute: ['to', 'data-testid', 'name', 'target'],
 		}],
 		'max-len': ['error', {
 			code: 120,

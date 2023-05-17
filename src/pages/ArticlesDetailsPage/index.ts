@@ -1,7 +1,11 @@
+import { ArticleDetailsPageSchema } from 'pages/ArticlesDetailsPage/model/types';
+
 export {
 	ArticlesDetailsPageAsync as ArticlesDetailsPage,
 } from './ui/ArticlesDetailsPage/ArticlesDetailsPage.async';
 
-export {
-	ArticleDetailsCommentsSchema,
-} from './model/types/ArticleDetailsCommentsSchema';
+export { ArticleDetailsCommentsSchema } from './model/types/ArticleDetailsCommentsSchema';
+
+export { ArticleDetailsRecommendationsSchema } from './model/types/ArticleDetailsRecommendations';
+
+export { ArticleDetailsPageSchema } from  './model/types';
